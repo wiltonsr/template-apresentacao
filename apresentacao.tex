@@ -1,0 +1,44 @@
+\input{fixos/pacotes}
+\input{fixos/configuracoes}
+\input{editaveis/capa}
+
+% ---
+% Início do documento
+% ---
+\begin{document}
+% the titlepage
+{\aauwavesbg
+\begin{frame}[plain,noframenumbering] % the plain option removes the sidebar and header from the title page
+  \titlepage
+\end{frame}}
+%%%%%%%%%%%%%%%%
+\input{fixos/agenda}
+
+% ------------------------------------------------------------
+% Inserir slides aqui
+% ------------------------------------------------------------
+\input{conteudo/feedback_affordance}
+
+% ----------------- Referências --------------------------------
+
+% --- O comando \allowframebreaks ---
+% Se o conteúdo não se encaixa em um quadro, a opção allowframebreaks instrui
+% beamer para quebrá-lo automaticamente entre dois ou mais quadros,
+% mantendo o frametitle do primeiro quadro (dado como argumento) e acrescentando
+% um número romano ou algo parecido na continuação.
+
+\begin{frame}{Referências}
+  \nocite{*}
+  \bibliographystyle{plain}
+  \bibliography{editaveis/bibliografia}
+\end{frame}
+
+% ----------------- FIM DO DOCUMENTO -----------------------------------------
+
+{\aauwavesbg%
+\begin{frame}[plain,noframenumbering]%
+  \finalpage{Obrigado!}
+\end{frame}}
+%%%%%%%%%%%%%%%%
+
+\end{document}

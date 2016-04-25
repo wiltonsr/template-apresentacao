@@ -1,0 +1,42 @@
+\title[]% optional, use only with long paper titles
+{Título do trabalho}
+
+\subtitle{Sub-título}  % could also be a conference name
+
+\date{\today}
+
+\author[] % optional, use only with lots of authors
+{
+  Nome\\
+  \href{mailto:email@domain.com}{{\tt email@domain.com}}
+}
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+ {\includegraphics[width=1cm]{figuras/logo-unb}}\\ %insert a company, department or university logo
+  Engenharia de Software\\
+  Faculdade\ do Gama\\
+  Universidade de Brasília
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the bottom of the title page
+  Engenharia de Software\\
+  Faculdade do Gama\\
+  Universidade de Brasília
+
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+% specify the logo in the top right/left of the slide
+% \pgfdeclareimage[height=1cm]{mainlogo}{figuras/logo} % placed in the upper left/right corner
+% \logo{\pgfuseimage{mainlogo}}
+
+% specify a logo on the titlepage (you can specify additional logos an include them in
+% institute command below
+\pgfdeclareimage[height=1.5cm]{titlepagelogo}{figuras/logo-unb} % placed on the title page
+% \pgfdeclareimage[height=1.5cm]{titlepagelogo2}{figuras/logo-fga} % placed on the title page
+\titlegraphic{% is placed on the bottom of the title page
+  \pgfuseimage{titlepagelogo}
+ % \hspace{5cm}\pgfuseimage{titlepagelogo}
+}
